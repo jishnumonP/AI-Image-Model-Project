@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Techflix AI Image Prediction Model Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .result-item {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .result-label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .result-percentage {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Techflix AI Image Prediction Model Results!</h1>
+    </header>
+    
+    <div class="container">
+        {% for r, p in res %}
+        <div class="result-item">
+            <span class="result-label">{{ r }}:</span>
+            <span class="result-percentage">{{ p }}%</span>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
